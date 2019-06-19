@@ -8,3 +8,7 @@
 * [quick-sort.js](https://github.com/khdevnet/algorithms/blob/master/sort/quick-sort.js)
 ### Dynamic programming
 ### Branch and bound
+
+
+# Resources
+* [sorting-and-searching-algorithms-time-complexities-cheat-sheet](https://www.hackerearth.com/practice/notes/sorting-and-searching-algorithms-time-complexities-cheat-sheet/)
