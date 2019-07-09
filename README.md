@@ -1,4 +1,6 @@
 # Algorithms
+![sorting and searching](https://github.com/khdevnet/algorithms/blob/master/docs/sorting-and-searching.png)
+![sorting and searching](sorting-and-searching-big-o-complexity.png)
 ### Graph traversal
 ### Brute force Greedy algorithms
 ### Divide and conquer
@@ -10,6 +12,12 @@
 * [quick-sort.js](https://github.com/khdevnet/algorithms/blob/master/sort/quick-sort.js)
 ### Dynamic programming
 ### Branch and bound
+
+
+# Data structures
+![Data structures](https://github.com/khdevnet/algorithms/blob/master/docs/data-structures.png)
+
+![Data structures](https://github.com/khdevnet/algorithms/blob/master/docs/data-structures.png)
 
 
 # Resources
