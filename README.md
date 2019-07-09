@@ -1,6 +1,6 @@
 # Algorithms
 ![sorting and searching](https://github.com/khdevnet/algorithms/blob/master/docs/sorting-and-searching.png)
-![sorting and searching](sorting-and-searching-big-o-complexity.png)
+![sorting and searching](https://github.com/khdevnet/algorithms/blob/master/docs/sorting-and-searching-big-o-complexity.png)
 ### Graph traversal
 ### Brute force Greedy algorithms
 ### Divide and conquer
