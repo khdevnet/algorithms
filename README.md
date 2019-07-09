@@ -17,9 +17,6 @@
 # Data structures
 ![Data structures](https://github.com/khdevnet/algorithms/blob/master/docs/data-structures.png)
 
-![Data structures](https://github.com/khdevnet/algorithms/blob/master/docs/data-structures.png)
-
-
 # Resources
 * [sorting-and-searching-algorithms-time-complexities-cheat-sheet](https://www.hackerearth.com/practice/notes/sorting-and-searching-algorithms-time-complexities-cheat-sheet/)
 * [data-structures-a-quick-comparison](https://medium.com/omarelgabrys-blog/data-structures-a-quick-comparison-6689d725b3b0)
