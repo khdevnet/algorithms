@@ -5,13 +5,13 @@
 * **Θ (The theta)**: notation bounds a functions from above and below, so it defines exact asymptotic behavior or average value.
 * **Ω (Omega)** notation defines a lower bound on time complexity of an algorithm or best value. 
 ### The following list explains some of the most common big Oh notations:
-* O(1) constant: the operation doesn't depend on the size of its input, e.g. adding a node to the tail of a linked list where we always maintain a pointer to the tail node.
-* O(n) linear: the run time complexity is proportionate to the size of n.
-* O(log n) logarithmic: normally associated with algorithms that break the problem into smaller chunks per each invocation, e.g. searching a binary search tree.
-* O(n log n) just n log n: usually associated with an algorithm that breaks the problem into smaller chunks per each invocation, and then takes the results of these smaller chunks and stitches them back together, e.g. quick sort.
-* O(n2) quadratic: e.g. bubble sort.
-* O(n3) cubic: very rare.
-* O(2n) exponential: incredibly rare.
+* **O(1) constant**: the operation doesn't depend on the size of its input, e.g. adding a node to the tail of a linked list where we always maintain a pointer to the tail node.
+* **O(n) linear**: the run time complexity is proportionate to the size of n.
+* **O(log n) logarithmic**: normally associated with algorithms that break the problem into smaller chunks per each invocation, e.g. searching a binary search tree.
+* **O(n log n) just n log n**: usually associated with an algorithm that breaks the problem into smaller chunks per each invocation, and then takes the results of these smaller chunks and stitches them back together, e.g. quick sort.
+* **O(n2) quadratic**: e.g. bubble sort.
+* **O(n3) cubic**: very rare.
+* **O(2n) exponential**: incredibly rare.
 
 ![sorting and searching](https://github.com/khdevnet/algorithms/blob/master/docs/sorting-and-searching.png)
 ![sorting and searching](https://github.com/khdevnet/algorithms/blob/master/docs/sorting-and-searching-big-o-complexity.png)
