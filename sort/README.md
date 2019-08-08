@@ -1,5 +1,7 @@
 ### Bubble Sort
 ![Merge Sort](https://github.com/khdevnet/algorithms/blob/master/sort/bubble-sort.png)
+### Insertion Sort
+![Insertion Sort](https://github.com/khdevnet/algorithms/blob/master/sort/insertion-sort.gif)
 ### Quick Sort
 ![Quick Sort](https://github.com/khdevnet/algorithms/blob/master/sort/quicksort.png)
 ### Merge Sort
