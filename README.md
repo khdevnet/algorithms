@@ -31,6 +31,25 @@
 # Data structures
 ![Data structures](https://github.com/khdevnet/algorithms/blob/master/docs/data-structures.png)
 
+# Data compression algorithms
+### RLE
+### Huffman
+The Huffman encoding algorithm is an optimal compression algorithm when only the frequency of individual letters are used to compress the data. (There are better algorithms that can use more structure of the file than just letter frequencies.) The idea behind the algorithm is that if you have some letters that are more frequent than others, it makes sense to use fewer bits to encode those letters than to encode the less frequent letters. 
+#### Example
+ "ADA ATE APPLE". There are 4 As, 1 D, 1 T, 2 Es, 2 Ps, 1 L, and 2 spaces.
+ ```
+char  encoding
+A     0
+E     10
+P     110
+space 1110
+D     11110
+T     111110
+L     111111
+ ```
+ 
+### LZ77
+
 # Resources
 * [sorting-and-searching-algorithms-time-complexities-cheat-sheet](https://www.hackerearth.com/practice/notes/sorting-and-searching-algorithms-time-complexities-cheat-sheet/)
 * [data-structures-a-quick-comparison](https://medium.com/omarelgabrys-blog/data-structures-a-quick-comparison-6689d725b3b0)
