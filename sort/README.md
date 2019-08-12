@@ -1,11 +1,11 @@
 ### Bubble Sort
 * **O(n)** is the best-case running time for bubble sort. It is possible to modify bubble sort to keep track of the number of swaps it performs. If an array is already in sorted order, and bubble sort makes no swaps, the algorithm can terminate after one pass. With this modification, if bubble sort encounters a list that is already sorted, it will finish in O(n)O(n) time.
-* **O(n^2)** is average and worst-case running time of O(n^2), and can only run in its best-case running time of O(n) when the input list is already sorted.
+* **O(n^2)** is average and worst-case running time of O(n^2), and can only run in its best-case running time of O(n) when the input list is already sorted.    
 ![Bubble-sort](https://github.com/khdevnet/algorithms/blob/master/sort/bubble-sort.png)
 
 ### Selection Sort
 * **Best Case Analysis** - same as insertion sort
-* **Worst and Average Case Analysis** - same as insertion sort
+* **Worst and Average Case Analysis** - same as insertion sort    
 ![Selection Sort](https://github.com/khdevnet/algorithms/blob/master/sort/selection-sort.jpg)
 
 ### Insertion Sort
