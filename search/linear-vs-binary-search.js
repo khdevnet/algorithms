@@ -5,14 +5,25 @@ app.alg = app.alg || {};
   let elementCount = 100;
   let step = 10;
   let elements = mergeSort(getNumbers(elementCount));
+  let getAvg = (runNumber, func) => {
+    let operations = 0;
+    for (let i = 0; i < runNumber; i++) {
+      let r = func();
+      operations += r.operations;
+    }
+    return operations / runNumber;
+  }
 
   app.linearSearchData = () => {
     let chartResult = [];
     for (let index = 0; index < elementCount; index += step) {
       let arr = elements.slice(0, index + step);
-      let searchElement = arr[arr.length - 1];
-      let r = app.alg.linearSearch(arr, searchElement);
-      chartResult.push({ elements: arr.length, operations: r.operations });
+      let avgOperations = getAvg(10, () => {
+        let searchElement = elements[getNumberBetweenRange(0, index + step)];
+        return app.alg.linearSearch(arr, searchElement);
+      });
+
+      chartResult.push({ elements: arr.length, operations: avgOperations });
     }
     return chartResult
   }
@@ -22,9 +33,12 @@ app.alg = app.alg || {};
     let chartResult = [];
     for (let index = 0; index < elementCount; index += step) {
       let arr = elements.slice(0, index + step);
-      let searchElement = arr[arr.length - 1];
-      let r = app.alg.binarySearch(arr, searchElement, 0, index + step);
-      chartResult.push({ result: r.result, elements: arr.length, operations: r.operations });
+      let avgOperations = getAvg(10, () => {
+        let searchElement = elements[getNumberBetweenRange(0, index + step)];
+        return app.alg.binarySearch(arr, searchElement, 0, index + step);
+      });
+
+      chartResult.push({ elements: arr.length, operations: avgOperations });
     }
     console.log(chartResult);
     return chartResult;
