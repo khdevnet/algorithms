@@ -1,4 +1,4 @@
-const arr = [2, 22, 5, 66, 33, 77, 1, 99];
+const arr = [8, 5, 7, 1, 9, 3];
 
 console.log(selectionSort(arr));
 
@@ -9,6 +9,7 @@ function selectionSort(unsortedArr) {
   }
 
   for (let i = 0; i < n; i++) {
+    console.log(unsortedArr);
     let minIndex = i;
     for (let j = i; j < n; j++) {
       if (unsortedArr[j] < unsortedArr[minIndex]) {

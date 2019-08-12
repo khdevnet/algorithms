@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}\\linearVSbinarySearch.js"
+      "program": "${workspaceFolder}\\linear-vs-binary-search.js"
     }
   ]
 }
