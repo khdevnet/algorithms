@@ -42,3 +42,4 @@ isEmpty: return whether the priority queue has no items
 * remove is Θ(logn)
 ### Resources
 * [pqueues representations](https://cs.lmu.edu/~ray/notes/pqueues/)
+* [priority-queue sample](https://github.com/adamhooper/js-priority-queue)
