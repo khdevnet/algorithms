@@ -40,3 +40,5 @@ isEmpty: return whether the priority queue has no items
 * add is Θ(logn)
 * peek is Θ(1)
 * remove is Θ(logn)
+### Resources
+* [pqueues representations](https://cs.lmu.edu/~ray/notes/pqueues/)
