@@ -76,3 +76,4 @@ L     111111
 * [sorting-and-searching-algorithms-time-complexities-cheat-sheet](https://www.hackerearth.com/practice/notes/sorting-and-searching-algorithms-time-complexities-cheat-sheet/)
 * [data-structures-a-quick-comparison](https://medium.com/omarelgabrys-blog/data-structures-a-quick-comparison-6689d725b3b0)
 * [What does ‘Space Complexity’ mean?](https://www.geeksforgeeks.org/g-fact-86/)
+* [Data compression](https://www.slideshare.net/MustafaGokce/lz77-and-lz78-compression-algorithms)
