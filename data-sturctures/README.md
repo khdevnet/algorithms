@@ -31,4 +31,6 @@ isEmpty: return whether the priority queue has no items
 ### Resources
 * [pqueues representations](https://cs.lmu.edu/~ray/notes/pqueues/)
 * [priority-queue sample](https://github.com/adamhooper/js-priority-queue)
+* [binary heap](https://en.wikipedia.org/wiki/Binary_heap)
 * [min heap](https://medium.com/@randerson112358/lets-build-a-min-heap-4d863cac6521)
+
