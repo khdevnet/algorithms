@@ -4,9 +4,10 @@ A priority queue is a collection in which items can be added at any time, but th
 
 ## Operations
 
-```add(x): add item x
-remove: remove the highest priority item
-peek: return the highest priority item (without removing it)
+```
+engueue(x): add item x
+dequeue: remove the highest priority item
+front: return the highest priority item (without removing it)
 size: return the number of items in the priority queue
 isEmpty: return whether the priority queue has no items
 ```
@@ -16,30 +17,17 @@ isEmpty: return whether the priority queue has no items
 * Routing A* search
 
 ## Representations
-### Unsorted Array
-* add is Θ(1) — just add the item at the end.
-* peek is Θ(n) — must do linear scan to find.
-* remove is Θ(n) — must find the element and compress the array.
-
-### Unsorted Linked List
-* add is Θ(1) — just add the item at the end.
-* peek is Θ(n) — must do linear scan to find.
-* remove is Θ(n) — because the item must be found first.
 
 ### Sorted Array
-* add is Θ(n) — you can find where to insert in log time, but you have to make room in the array, which is linear.
-* peek is Θ(1) — the value is at the end of the array.
-* remove is Θ(1) — we can just whack the item off the end.
-
-### Sorted Linked List
-* add is Θ(n) — you have to step through the chain to find the place to insert.
-* peek is Θ(1) — the value is at the end of the array.
-* remove is Θ(1) — we can just whack the item off the end.
+* engueue is Θ(n log n) — you can find where to insert in log time, but you have to make room in the array, which is linear.
+* front is Θ(1) — return the highest priority item (without removing it)
+* dequeue is Θ(1) — remove the highest priority item.
 
 ### Heap
-* add is Θ(logn)
-* peek is Θ(1)
-* remove is Θ(logn)
+* engueue is  Θ(log n) — you can find where to insert in log time, but you have to make room in the array, which is linear.
+* front is Θ(1) — return the highest priority item (without removing it)
+* dequeue is Θ(log n) — remove the highest priority item.
+
 ### Resources
 * [pqueues representations](https://cs.lmu.edu/~ray/notes/pqueues/)
 * [priority-queue sample](https://github.com/adamhooper/js-priority-queue)
