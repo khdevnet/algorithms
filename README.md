@@ -62,7 +62,15 @@ T     111110
 L     111111
  ```
  
-### LZ77
+### LZ77, LZ78
+* **LZ77** algorithms achieve compression by replacing repeated occurrences of data with references to a single copy of that data existing earlier in the uncompressed data stream. A match is encoded by a pair of numbers called a length-distance pair, which is equivalent to the statement "each of the next length characters is equal to the characters exactly distance characters behind it in the uncompressed stream". (The distance is sometimes called the offset instead.)
+
+* **LZ78** algorithms achieve compression by replacing repeated occurrences of data with references to a dictionary that is built based on the input data stream. Each dictionary entry is of the form dictionary[...] = {index, character}, where index is the index to a previous dictionary entry, and character is appended to the string represented by dictionary[index]. For example, "abc" would be stored (in reverse order) as follows: dictionary[k] = {j, 'c'}, dictionary[j] = {i, 'b'}, dictionary[i] = {0, 'a'}, where an index of 0 specifies the first character of a string.
+
+#### Use in modern algorithms
+* DEFLATE: Used by PNG, ZIP and GZIP
+* LZMA: (Very high compression ration) Used by: 7Zip and xz
+* LZSS: Used by WinRar with Huffman coding
 
 # Resources
 * [sorting-and-searching-algorithms-time-complexities-cheat-sheet](https://www.hackerearth.com/practice/notes/sorting-and-searching-algorithms-time-complexities-cheat-sheet/)
