@@ -4,25 +4,25 @@ class PriorityQueue {
     this.queue = [];
   }
 
-  enqueue(element, priority = 0) {
-    this.queue.unshift({ element, priority });
-    this.queue = this.queue.sort((a, b) => b.priority - a.priority)
+  enqueue(element) {
+    this.queue.unshift(element);
+    this.queue = this.queue.sort((a, b) => b - a)
   }
 
   dequeue() {
-    return this.queue.pop().element;
+    return this.queue.pop();
   }
 
   front() {
     if (!this.isEmpty()) {
-      return this.queue[this.queue.length - 1].element
+      return this.queue[this.queue.length - 1]
     }
     throw new Exception("PriorityQueue is empty.");
   }
 
   rear() {
     if (!this.isEmpty()) {
-      return this.queue[0].element
+      return this.queue[0]
     }
     throw new Exception("PriorityQueue is empty.");
   }
@@ -31,15 +31,15 @@ class PriorityQueue {
     return this.queue.length === 0
   }
   print() {
-    console.log(this.queue.map(el => el.element));
+    console.log(this.queue);
   }
 }
 
 var pq = new PriorityQueue();
-pq.enqueue(10, 5);
-pq.enqueue(11, 2);
-pq.enqueue(12, 3);
-pq.enqueue(5, 1);
+pq.enqueue(10);
+pq.enqueue(11);
+pq.enqueue(12);
+pq.enqueue(5);
 console.log('all');
 pq.print();
 
@@ -50,9 +50,10 @@ console.log('dequeue: ' + pq.dequeue());
 console.log('all');
 pq.print();
 
-console.log('enqueue: 7, 0');
-pq.enqueue(7, 0);
-
+console.log('enqueue: 7');
+pq.enqueue(7);
+console.log('enqueue: 11');
+pq.enqueue(11);
 console.log('all');
 
 console.log('front: ' + pq.front());
