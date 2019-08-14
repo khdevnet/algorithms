@@ -32,6 +32,9 @@
 ![Data structures](https://github.com/khdevnet/algorithms/blob/master/docs/data-structures.png)
 
 # Data compression algorithms
+* **Lossy compression** refers to compression in which some of the data from the original file (JPEG) is lost. The process is irreversible, once you convert to lossy, you can’t go back. And the more you compress it, the more degradation occurs. JPEGs and GIFs are both lossy image formats. By default WordPress uses a lossy compression rate of 90 percent to optimize JPEG images when creating preview images. You can change this using the filter jpeg_quality in your functions.php file.
+* **Lossless data compression** make use of data compression algorithms that allows the exact original data to be reconstructed from the compressed data. This can be contrasted to lossy data compression, which does not allow the exact original data to be reconstructed from the compressed data. Lossless data compression is used in many applications. For example, it is used in the popular ZIP file format and in the Unix tool gzip. It is also often used as a component within lossy data compression technologies. 
+
 ### RLE
 Run-length encoding is a data compression algorithm that is supported by most bitmap file formats, such as TIFF, BMP, and PCX. RLE is suited for compressing any type of data regardless of its information content, but the content of the data will affect the compression ratio achieved by RLE. Although most RLE algorithms cannot achieve the high compression ratios of the more advanced compression methods, RLE is both easy to implement and quick to execute, making it a good alternative to either using a complex compression algorithm or leaving your image data uncompressed.
 
