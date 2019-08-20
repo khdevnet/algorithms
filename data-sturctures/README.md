@@ -34,25 +34,6 @@ printList(): prints to the console the data property of each node in the list
 * insert is Θ(1) — insert to the tail of Linked List
 * insertBefore, insertAfter, removeNode is Θ(n) - you should find a node where to insert/remove
 
-### Advantages
-
-- List will grow dynamically with each node added; no requirement to
-  'resize' list when it reaches a certain size, saving considerable overhead
-  in 'house-keeping' operations.
-- Flexibility to add or remove nodes at the beginning or end of the list in
-  O(1) time.  This is a significant improvement over its
-  [singly linked list](https://github.com/jasonsjones/singly-linked-list)
-  counterpart.
-
-### Disadvantages
-
-- All 'find' operations take O(n) time to iterate over the list to find the
-  requested node.  This is the case for both the singly and doubly linked
-  list.
-
-*For specific examples and documentation, see the below sections*
-
-
 # Priority queue
 ## The Basics
 A priority queue is a collection in which items can be added at any time, but the only item that can be removed is the one with the highest priority.
