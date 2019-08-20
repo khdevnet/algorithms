@@ -1,5 +1,5 @@
 # Doubly Linked List
-![Doubly Linked List](https://github.com/khdevnet/algorithms/blob/master/data-structures/linked-list.jpg)
+![Doubly Linked List](https://github.com/khdevnet/algorithms/blob/master/algorithms/data-sturctures//linked-list.jpg)
 ## The Basics
 
 In simple terms, a doubly linked list consists of one or more 'nodes'.  Each node has a data field (which can contain any data--a primitive value or complex object) and a pointer to the next 'node' and the previous 'node'. This additional pointer to the previous node is what distinguishes a doubly linked list from a singly linked list--a singly linked list only contains a pointer, or reference, to the next node.  The major advantage to having pointers to both the next and previous node is that the list can be traversed in both
@@ -36,7 +36,7 @@ printList(): prints to the console the data property of each node in the list
 * insertBefore, insertAfter, removeNode is Θ(n) - you should find a node where to insert/remove
 
 # Priority queue
-![Priority queue List](https://github.com/khdevnet/algorithms/blob/master/data-structures/priority-queue.jpg)
+![Priority queue List](https://github.com/khdevnet/algorithms/blob/master/algorithms/data-structures/priority-queue.jpg)
 ## The Basics
 A priority queue is a collection in which items can be added at any time, but the only item that can be removed is the one with the highest priority.
 
