@@ -85,37 +85,31 @@
         },
 
         insertBefore: function (nodeData, dataToInsert) {
-            var indexAndNode = this.indexAndNode(nodeData);
+            var current = this.find(nodeData);
 
-            if (!this.isIndexValid(indexAndNode.index)) {
+            if (!current) {
                 return false;
             }
-            console.log(indexAndNode);
-            if (indexAndNode.index === 0) {
+
+            if (!current.prev) {
                 return this.insertFirst(dataToInsert);
             } else {
-                return this.insertAt(indexAndNode.current, dataToInsert);
+                return this.insertAt(current, dataToInsert);
             }
         },
 
         insertAfter: function (nodeData, dataToInsert) {
-            var indexAndNode = this.indexAndNode(nodeData);
-            
-            if (!this.isIndexValid(indexAndNode.index)) {
+            var current = this.find(nodeData);
+
+            if (!current) {
                 return false;
             }
 
-            var size = this.getSize();
-
-            if (indexAndNode.index + 1 === size) {
+            if (!current.next) {
                 return this.insert(dataToInsert);
             } else {
-                return this.insertAt(indexAndNode.current.next, dataToInsert);
+                return this.insertAt(current.next, dataToInsert);
             }
-        },
-
-        isIndexValid: function(index){
-            return index >= 0 && index < this.getSize()
         },
 
         remove: function () {
@@ -156,21 +150,7 @@
             return nodeToRemove;
         },
 
-        removeAt: function (index) {
-            var nodeToRemove = this.findAt(index);
-
-            if (index < 0 || index > this.getSize() - 1) {
-                return null;
-            }
-
-            if (index === 0) {
-                return this.removeFirst();
-            }
-
-            if (index === this.getSize() - 1) {
-                return this.remove();
-            }
-
+        removeAt: function (nodeToRemove) {
             nodeToRemove.prev.next = nodeToRemove.next;
             nodeToRemove.next.prev = nodeToRemove.prev;
             nodeToRemove.next = nodeToRemove.prev = null;
@@ -181,45 +161,22 @@
         },
 
         removeNode: function (nodeData) {
-            var index = this.indexOf(nodeData);
-            return this.removeAt(index);
+            var current = this.find(nodeData);
+
+            if (!current) {
+                return false;
+            }
+
+            if (!current.prev) {
+                return this.removeFirst();
+            } else if (!current.next) {
+                return this.remove();
+            } else {
+                return this.removeAt(current);
+            }
         },
 
         //################## FIND methods ####################
-
-        indexOf: function (nodeData) {
-            this.iterator.reset();
-            var current;
-
-            var index = 0;
-
-            while (this.iterator.hasNext()) {
-                current = this.iterator.next();
-                if (isEqual(current.getData(), nodeData)) {
-                    return index;
-                }
-                index += 1;
-            }
-
-            return -1;
-        },
-
-        indexAndNode: function (nodeData) {
-            this.iterator.reset();
-            var current;
-
-            var index = 0;
-
-            while (this.iterator.hasNext()) {
-                current = this.iterator.next();
-                if (isEqual(current.getData(), nodeData)) {
-                    return { index, current};
-                }
-                index += 1;
-            }
-
-            return { index: -1, current: null};
-        },
 
         find: function (nodeData) {
             this.iterator.reset();
@@ -232,23 +189,7 @@
                 }
             }
 
-            return -1;
-        },
-
-        findAt: function (index) {
-            if (this.isEmpty() || index > this.getSize() - 1) {
-                return -1;
-            }
-
-            var node = this.getHeadNode();
-            var position = 0;
-
-            while (position < index) {
-                node = node.next;
-                position += 1;
-            }
-
-            return node;
+            return null;
         },
 
         //################## UTILITY methods ####################

@@ -68,6 +68,7 @@ describe('LinkedList', function () {
       linkedList.insert(3);
       linkedList.insertBefore(3, 4);
       let current = linkedList.find(4);
+      assert.equal(current.prev, 2);
       assert.equal(current.next, 3);
     });
 
@@ -76,6 +77,7 @@ describe('LinkedList', function () {
         linkedList.insert(2);
         linkedList.insertBefore(2, 4);
         let current = linkedList.find(4);
+        assert.equal(current.prev, null);
         assert.equal(current.next, 2);
       });
 
@@ -90,11 +92,13 @@ describe('LinkedList', function () {
   describe('insertAfter', function () {
     it('should add element after specified', function () {
       var linkedList = new LinkedList();
+      linkedList.insert(1);
       linkedList.insert(2);
       linkedList.insert(3);
       linkedList.insertAfter(2, 4);
       let current = linkedList.find(4);
       assert.equal(current.prev, 2);
+      assert.equal(current.next, 3);
     });
 
     it('should add element last', function () {
@@ -104,6 +108,7 @@ describe('LinkedList', function () {
         linkedList.insertAfter(3, 4);
         let current = linkedList.find(4);
         assert.equal(current.prev, 3);
+        assert.equal(current.next, null);
       });
 
       it('shouldn"t add element, beacause not exist', function () {
@@ -121,7 +126,8 @@ describe('LinkedList', function () {
       linkedList.insert(3);
       linkedList.insert(4);
       linkedList.remove();
-      assert.equal(linkedList.find(4), -1);
+      assert.equal(linkedList.find(4), null);
+      assert.equal(linkedList.tail, 3);
     });
   });
 
@@ -132,7 +138,8 @@ describe('LinkedList', function () {
       linkedList.insert(3);
       linkedList.insert(4);
       linkedList.removeFirst();
-      assert.equal(linkedList.find(2), -1);
+      assert.equal(linkedList.find(2), null);
+      assert.equal(linkedList.head, 3);
     });
   });
 
@@ -143,7 +150,10 @@ describe('LinkedList', function () {
       linkedList.insert(3);
       linkedList.insert(4);
       linkedList.removeNode(3);
-      assert.equal(linkedList.find(3), -1);
+
+      assert.equal(linkedList.find(2).next, 4);
+      assert.equal(linkedList.find(3), null);
+      assert.equal(linkedList.find(2).prev, null);
     });
   });
 
@@ -153,7 +163,6 @@ describe('LinkedList', function () {
       linkedList.insert(2);
       linkedList.insert(3);
       linkedList.insert(4);
-      linkedList.removeFirst();
       let node = linkedList.find(3);
       assert.equal(node.data, 3);
     });
