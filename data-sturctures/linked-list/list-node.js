@@ -8,11 +8,6 @@
   }
 
   Node.prototype = {
-
-    getData: function () {
-      return this.data;
-    },
-
     toString: function () {
       if (typeof this.data === 'object') {
         return JSON.stringify(this.data);

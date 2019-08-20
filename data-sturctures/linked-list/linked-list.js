@@ -175,15 +175,13 @@
             }
         },
 
-        //################## FIND methods ####################
-
         find: function (nodeData) {
             this.iterator.reset();
             var current;
 
             while (this.iterator.hasNext()) {
                 current = this.iterator.next();
-                if (current.getData() === nodeData) {
+                if (current.data === nodeData) {
                     return current;
                 }
             }
@@ -191,22 +189,12 @@
             return null;
         },
 
-        forEach: function (fn, reverse) {
-            reverse = reverse || false;
-            if (reverse) {
-                this.iterator.reset_reverse();
-                this.iterator.each_reverse(fn);
-            } else {
-                this.iterator.reset();
-                this.iterator.each(fn);
-            }
-        },
-
         toArray: function () {
             var listArray = [];
-            this.forEach(function (node) {
-                listArray.push(node.getData());
-            });
+            while (this.iterator.hasNext()) {
+                current = this.iterator.next();
+                listArray.push(current.data);
+            };
 
             return listArray;
         }

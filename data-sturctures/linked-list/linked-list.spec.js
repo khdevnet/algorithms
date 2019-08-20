@@ -153,7 +153,7 @@ describe('LinkedList', function () {
 
       assert.equal(linkedList.find(2).next, 4);
       assert.equal(linkedList.find(3), null);
-      assert.equal(linkedList.find(2).prev, null);
+      assert.equal(linkedList.find(4).prev, 2);
     });
   });
 
