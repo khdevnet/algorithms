@@ -109,15 +109,9 @@
             var index = this.indexOf(nodeData);
             var size = this.getSize();
 
-            // check if we want to insert new node after the tail node
             if (index + 1 === size) {
-
-                // if so, call insert, which will append to the end by default
                 return this.insert(dataToInsert);
-
             } else {
-
-                // otherwise, increment the index and insert there
                 return this.insertAt(index + 1, dataToInsert);
             }
         },
@@ -132,8 +126,6 @@
             if (this.getSize() === 1) {
                 this.head = null;
                 this.tail = null;
-
-                // more than one node in the list
             } else {
                 this.tail = this.getTailNode().prev;
                 this.tail.next = null;
@@ -165,18 +157,14 @@
         removeAt: function (index) {
             var nodeToRemove = this.findAt(index);
 
-            // check for index out-of-bounds
             if (index < 0 || index > this.getSize() - 1) {
                 return null;
             }
 
-            // if index is 0, we just need to remove the first node
             if (index === 0) {
                 return this.removeFirst();
             }
 
-            // if index is size-1, we just need to remove the last node,
-            // which remove() does by default
             if (index === this.getSize() - 1) {
                 return this.remove();
             }
@@ -203,8 +191,6 @@
 
             var index = 0;
 
-            // iterate over the list (keeping track of the index value) until
-            // we find the node containg the nodeData we are looking for
             while (this.iterator.hasNext()) {
                 current = this.iterator.next();
                 if (isEqual(current.getData(), nodeData)) {
@@ -213,17 +199,13 @@
                 index += 1;
             }
 
-            // only get here if we didn't find a node containing the nodeData
             return -1;
         },
 
         find: function (nodeData) {
-            // start at the head of the list
             this.iterator.reset();
             var current;
 
-            // iterate over the list until we find the node containing the data
-            // we are looking for
             while (this.iterator.hasNext()) {
                 current = this.iterator.next();
                 if (isEqual(current.getData(), nodeData)) {
@@ -231,18 +213,14 @@
                 }
             }
 
-            // only get here if we didn't find a node containing the nodeData
             return -1;
         },
 
         findAt: function (index) {
-            // if idx is out of bounds or fn called on empty list, return -1
             if (this.isEmpty() || index > this.getSize() - 1) {
                 return -1;
             }
 
-            // else, loop through the list and return the node in the
-            // position provided by idx.  Assume zero-based positions.
             var node = this.getHeadNode();
             var position = 0;
 

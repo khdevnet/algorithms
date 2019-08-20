@@ -1,28 +1,37 @@
-var BinaryHeap = require('./binary-heap');
+(function () {
+  'use strict';
 
-var PriorityQueue = function () {
-  this.heap = new BinaryHeap();
-};
+  var BinaryHeap = require('./binary-heap');
 
-PriorityQueue.prototype.enqueue = function (value) {
-  this.heap.insert(value);
-};
+  var PriorityQueue = function () {
+    this.heap = new BinaryHeap();
+  };
 
-PriorityQueue.prototype.dequeue = function () {
-  return this.heap.extractMinimum();
-};
+  PriorityQueue.prototype.enqueue = function (value) {
+    this.heap.insert(value);
+  };
 
-PriorityQueue.prototype.front = function () {
-  return this.heap.findMinimum();
-};
+  PriorityQueue.prototype.dequeue = function () {
+    return this.heap.extractMinimum();
+  };
 
-PriorityQueue.prototype.clear = function () {
-  this.heap.clear();
-};
+  PriorityQueue.prototype.front = function () {
+    return this.heap.findMinimum();
+  };
 
-PriorityQueue.prototype.print = function () {
-  this.heap.print();
-};
+  PriorityQueue.prototype.size = function () {
+    return this.heap.size();
+  };
+
+  PriorityQueue.prototype.clear = function () {
+    this.heap.clear();
+  };
+
+  PriorityQueue.prototype.print = function () {
+    this.heap.print();
+  };
 
 
-module.exports = PriorityQueue;
+  module.exports = PriorityQueue;
+
+})();
