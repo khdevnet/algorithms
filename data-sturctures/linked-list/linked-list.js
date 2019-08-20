@@ -1,7 +1,6 @@
 (function () {
     'use strict';
 
-    var isEqual = require('./is-equal');
     var Node = require('./list-node');
     var Iterator = require('./iterator');
 
@@ -184,15 +183,13 @@
 
             while (this.iterator.hasNext()) {
                 current = this.iterator.next();
-                if (isEqual(current.getData(), nodeData)) {
+                if (current.getData() === nodeData) {
                     return current;
                 }
             }
 
             return null;
         },
-
-        //################## UTILITY methods ####################
 
         forEach: function (fn, reverse) {
             reverse = reverse || false;
