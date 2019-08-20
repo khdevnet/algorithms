@@ -71,24 +71,8 @@
             return true;
         },
 
-        insertAt: function (index, data) {
-            var current = this.getHeadNode(),
-                newNode = this.createNewNode(data),
-                position = 0;
-
-            if (index < 0 || index > this.getSize() - 1) {
-                return false;
-            }
-
-            if (index === 0) {
-                this.insertFirst(data);
-                return true;
-            }
-
-            while (position < index) {
-                current = current.next;
-                position += 1;
-            }
+        insertAt: function (current, data) {
+            var newNode = this.createNewNode(data);
 
             current.prev.next = newNode;
             newNode.prev = current.prev;
@@ -101,19 +85,37 @@
         },
 
         insertBefore: function (nodeData, dataToInsert) {
-            var index = this.indexOf(nodeData);
-            return this.insertAt(index, dataToInsert);
+            var indexAndNode = this.indexAndNode(nodeData);
+
+            if (!this.isIndexValid(indexAndNode.index)) {
+                return false;
+            }
+            console.log(indexAndNode);
+            if (indexAndNode.index === 0) {
+                return this.insertFirst(dataToInsert);
+            } else {
+                return this.insertAt(indexAndNode.current, dataToInsert);
+            }
         },
 
         insertAfter: function (nodeData, dataToInsert) {
-            var index = this.indexOf(nodeData);
+            var indexAndNode = this.indexAndNode(nodeData);
+            
+            if (!this.isIndexValid(indexAndNode.index)) {
+                return false;
+            }
+
             var size = this.getSize();
 
-            if (index + 1 === size) {
+            if (indexAndNode.index + 1 === size) {
                 return this.insert(dataToInsert);
             } else {
-                return this.insertAt(index + 1, dataToInsert);
+                return this.insertAt(indexAndNode.current.next, dataToInsert);
             }
+        },
+
+        isIndexValid: function(index){
+            return index >= 0 && index < this.getSize()
         },
 
         remove: function () {
@@ -200,6 +202,23 @@
             }
 
             return -1;
+        },
+
+        indexAndNode: function (nodeData) {
+            this.iterator.reset();
+            var current;
+
+            var index = 0;
+
+            while (this.iterator.hasNext()) {
+                current = this.iterator.next();
+                if (isEqual(current.getData(), nodeData)) {
+                    return { index, current};
+                }
+                index += 1;
+            }
+
+            return { index: -1, current: null};
         },
 
         find: function (nodeData) {
