@@ -40,6 +40,13 @@ printList(): prints to the console the data property of each node in the list
 ## The Basics
 A priority queue is a collection in which items can be added at any time, but the only item that can be removed is the one with the highest priority.
 
+## Array representation
+```Let n be the number of elements in the heap and i be an arbitrary valid index of the array storing the heap. If the tree root is at index 0, with valid indices 0 through n − 1, then each element a at index i has
+
+children at indices 2i + 1 and 2i + 2
+its parent at index floor((i − 1) ∕ 2).
+```
+
 ## Operations
 
 ```
