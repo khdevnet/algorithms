@@ -19,7 +19,7 @@
       }
       var min = this.list[0];
       this.list[0] = this.list.pop();
-      heapify(this, 0);
+      bubbleDown(this, 0);
       return min;
     },
 
@@ -27,13 +27,7 @@
       var i = this.list.length;
       var node = key;
       this.list.push(node);
-      var parent = getParent(i);
-      while (typeof parent !== 'undefined' &&
-        this.compare(this.list[i], this.list[parent]) < 0) {
-        swap(this.list, i, parent);
-        i = parent;
-        parent = getParent(i);
-      }
+      bubbleUp(this, i);
       return node;
     },
 
@@ -67,7 +61,17 @@
 
   };
 
-  function heapify(heap, i) {
+  function bubbleUp(heap, i) {
+    var parent = getParent(i);
+    while (typeof parent !== 'undefined' &&
+      heap.compare(heap.list[i], heap.list[parent]) < 0) {
+      swap(heap.list, i, parent);
+      i = parent;
+      parent = getParent(i);
+    }
+  }
+
+  function bubbleDown(heap, i) {
     var l = getLeft(i);
     var r = getRight(i);
     var smallest = i;
