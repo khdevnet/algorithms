@@ -23,9 +23,8 @@
       return min;
     },
 
-    insert: function (key) {
+    insert: function (node) {
       var i = this.list.length;
-      var node = key;
       this.list.push(node);
       bubbleUp(this, i);
       return node;
