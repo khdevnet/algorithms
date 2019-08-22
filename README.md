@@ -72,6 +72,16 @@ L     111111
 * LZMA: (Very high compression ration) Used by: 7Zip and xz
 * LZSS: Used by WinRar with Huffman coding
 
+# Parsing algorithms
+## Top-down parsing
+In this Parsing technique we expand the start symbol to the whole program.
+### Recursive descent parser
+### LL parser
+## Bottom-up parser
+In this Parsing technique we reduce the whole program to start symbol.
+### LR parser
+### GLR parser
+
 # Resources
 * [sorting-and-searching-algorithms-time-complexities-cheat-sheet](https://www.hackerearth.com/practice/notes/sorting-and-searching-algorithms-time-complexities-cheat-sheet/)
 * [data-structures-a-quick-comparison](https://medium.com/omarelgabrys-blog/data-structures-a-quick-comparison-6689d725b3b0)
