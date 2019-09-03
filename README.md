@@ -73,6 +73,7 @@ L     111111
 * LZSS: Used by WinRar with Huffman coding
 
 # Parsing algorithms
+![](https://github.com/khdevnet/algorithms/blob/master/docs/lexer-parser-center.png)
 * **Scannerless Parsers** - Scannerless parsers operate differently because they process directly the original text instead of processing a list of tokens produced by a lexer. That is to say, a scannerless parser works as a lexer and a parser combined.
 * **Grammar** - a formal grammar is a set of rules that describes syntactically a language.
 * **Lexer(scanners,tokenizers)** - A lexer transforms a sequence of characters in a sequence of tokens.
@@ -85,6 +86,7 @@ int sum = x + y // incorect because y not defined;
 * **Parse tree** is a representation of the code closer to the concrete syntax. It shows many details of the implementations of the parser.
 * **Abstract Syntax Tree** is a representation of the code closer to the concrete syntax. It shows many details of the implementations of the parser.
 * **Parsing Tree(PT) and Abstract Syntax Tree(AST)** - **PT** contains all tokens after parsing, after processing some nodes of **PT** can be removed and from left nodes builds **AST**
+![](https://github.com/khdevnet/algorithms/blob/master/docs/parse-trees.png)
 ## Top-down parsing
 In this Parsing technique we expand the start symbol to the whole program.
 ### Recursive descent parser
