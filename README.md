@@ -115,6 +115,7 @@ In this Parsing technique we reduce the whole program to start symbol.
 ### GLR parser
 
 # Resources
+* [parsing-algorithms-and-technology](https://dzone.com/articles/a-guide-to-parsing-algorithms-and-technology-part-3)
 * [sorting-and-searching-algorithms-time-complexities-cheat-sheet](https://www.hackerearth.com/practice/notes/sorting-and-searching-algorithms-time-complexities-cheat-sheet/)
 * [data-structures-a-quick-comparison](https://medium.com/omarelgabrys-blog/data-structures-a-quick-comparison-6689d725b3b0)
 * [What does ‘Space Complexity’ mean?](https://www.geeksforgeeks.org/g-fact-86/)
