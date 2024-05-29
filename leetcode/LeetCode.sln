@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "88MergeSortedArrays", "88MergeSortedArrays\88MergeSortedArrays.csproj", "{B0CB77A6-A1D8-4BA8-98A0-301C6EBFE952}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "88MergeSortedArrays", "88MergeSortedArrays\88MergeSortedArrays.csproj", "{B0CB77A6-A1D8-4BA8-98A0-301C6EBFE952}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{87DE80AD-6E40-4544-8D0C-4BA9C66441DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{87DE80AD-6E40-4544-8D0C-4BA9C66441DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "26RemoveDuplicatesFromSortedArray", "26RemoveDuplicatesFromSortedArray\26RemoveDuplicatesFromSortedArray.csproj", "{83C893F0-BEB1-4A9A-92BD-8E3AFD57AC27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "80RemoveDuplicatesFromSortedArrayII", "80RemoveDuplicatesFromSortedArrayII\80RemoveDuplicatesFromSortedArrayII.csproj", "{F8327520-32ED-4F58-88FE-56869487027B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{87DE80AD-6E40-4544-8D0C-4BA9C66441DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87DE80AD-6E40-4544-8D0C-4BA9C66441DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87DE80AD-6E40-4544-8D0C-4BA9C66441DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C893F0-BEB1-4A9A-92BD-8E3AFD57AC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C893F0-BEB1-4A9A-92BD-8E3AFD57AC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C893F0-BEB1-4A9A-92BD-8E3AFD57AC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C893F0-BEB1-4A9A-92BD-8E3AFD57AC27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8327520-32ED-4F58-88FE-56869487027B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8327520-32ED-4F58-88FE-56869487027B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8327520-32ED-4F58-88FE-56869487027B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8327520-32ED-4F58-88FE-56869487027B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
