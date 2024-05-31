@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "260SingleNumberlll",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/260SingleNumberlll/bin/Debug/net7.0/260SingleNumberlll.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/260SingleNumberlll",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "121BestTimeToBuyAndSellStock",
             "type": "coreclr",
             "request": "launch",
