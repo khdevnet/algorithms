@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "1TwoSum",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/1TwoSum/bin/Debug/net7.0/1TwoSum.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/1TwoSum",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "260SingleNumberlll",
             "type": "coreclr",
             "request": "launch",
