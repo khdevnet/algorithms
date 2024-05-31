@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "169MajorityElement",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/169MajorityElement/bin/Debug/net7.0/169MajorityElement.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/169MajorityElement",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "80RemoveDuplicatesFromSortedArrayII",
             "type": "coreclr",
             "request": "launch",

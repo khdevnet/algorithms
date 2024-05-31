@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "26RemoveDuplicatesFromSorte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "80RemoveDuplicatesFromSortedArrayII", "80RemoveDuplicatesFromSortedArrayII\80RemoveDuplicatesFromSortedArrayII.csproj", "{F8327520-32ED-4F58-88FE-56869487027B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "169MajorityElement", "169MajorityElement\169MajorityElement.csproj", "{D05A1876-BE28-4F97-9C0C-40BEB6DB4DB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F8327520-32ED-4F58-88FE-56869487027B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8327520-32ED-4F58-88FE-56869487027B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8327520-32ED-4F58-88FE-56869487027B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D05A1876-BE28-4F97-9C0C-40BEB6DB4DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D05A1876-BE28-4F97-9C0C-40BEB6DB4DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D05A1876-BE28-4F97-9C0C-40BEB6DB4DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D05A1876-BE28-4F97-9C0C-40BEB6DB4DB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
