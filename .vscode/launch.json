@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "121BestTimeToBuyAndSellStock",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/121BestTimeToBuyAndSellStock/bin/Debug/net7.0/121BestTimeToBuyAndSellStock.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/121BestTimeToBuyAndSellStock",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "169MajorityElement",
             "type": "coreclr",
             "request": "launch",

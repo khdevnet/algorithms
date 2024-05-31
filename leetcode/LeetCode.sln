@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "80RemoveDuplicatesFromSorte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "169MajorityElement", "169MajorityElement\169MajorityElement.csproj", "{D05A1876-BE28-4F97-9C0C-40BEB6DB4DB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "121BestTimeToBuyAndSellStock", "121BestTimeToBuyAndSellStock\121BestTimeToBuyAndSellStock.csproj", "{AE7AE49F-2B09-42BE-8F70-524752115F7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D05A1876-BE28-4F97-9C0C-40BEB6DB4DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D05A1876-BE28-4F97-9C0C-40BEB6DB4DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D05A1876-BE28-4F97-9C0C-40BEB6DB4DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7AE49F-2B09-42BE-8F70-524752115F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7AE49F-2B09-42BE-8F70-524752115F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7AE49F-2B09-42BE-8F70-524752115F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7AE49F-2B09-42BE-8F70-524752115F7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
