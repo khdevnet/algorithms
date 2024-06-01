@@ -5,13 +5,11 @@
         // III
         // LVIII
         // MCMXCIV
-        int arabNumb = RomanToInt("III");
+        int arabNumb = RomanToInt("MCMXCIV");
         Console.ReadLine();
     }
 
-    private static int RomanToInt(string s)
-    {
-        var romanNumsMap = new Dictionary<string, int>(){
+    private static Dictionary<string, int> romanNumsMap = new Dictionary<string, int>(){
             {"I", 1},
             {"IV", 4},
             {"V", 5},
@@ -26,29 +24,56 @@
             {"CM", 900},
             {"M", 1000}
         };
-        if(s.Length == 1) return romanNumsMap[s];
-       
-        var arabNum = 0;
-        int i = 0;
-        while (i < s.Length)
-        {
-            string num2Symb = "";
-            if (i + 1 < s.Length)
-            {
-                num2Symb = new string(new Char[] { s[i], s[i + 1] });
 
-            }
-            if (romanNumsMap.ContainsKey(num2Symb))
+    private static int RomanToInt(string s)
+    {
+        if (s.Length == 1) return romanNumsMap[s];
+        var calculatedIndx = new HashSet<int>();
+        var arabNum = 0;
+        for (int i = 0; i < s.Length - 1; i++)
+        {
+            var numSymb = new string(new Char[] { s[i], s[i + 1] });
+            if (romanNumsMap.ContainsKey(numSymb))
             {
-                arabNum = arabNum + romanNumsMap[num2Symb];
-                i += 2;
+                arabNum = arabNum + romanNumsMap[numSymb];
+                calculatedIndx.Add(i);
+                calculatedIndx.Add(i + 1);
             }
-            else if (romanNumsMap.ContainsKey(new string(new Char[] { s[i] })))
+        }
+
+        for (int j = 0; j < s.Length; j++)
+        {
+            var numSymb1 = new string(new Char[] { s[j] });
+            if (!calculatedIndx.Contains(j))
             {
-                arabNum = arabNum + romanNumsMap[new string(new Char[] { s[i] })];
-                i++;
+                arabNum = arabNum + romanNumsMap[numSymb1];
             }
         }
         return arabNum;
+    }
+
+    public int RomanToIntV2(string s)
+    {
+        int sum = 0;
+        int i = 0;
+        while (i < s.Length)
+        {
+            if (i < s.Length - 1)
+            {
+                string doubleSymbol = s.Substring(i, 2);
+                if (romanNumsMap.ContainsKey(doubleSymbol))
+                {
+                    sum += romanNumsMap[doubleSymbol];
+                    i += 2;
+                    continue;
+                }
+            }
+
+            string singleSymbol = s.Substring(i, 1);
+            sum += romanNumsMap[singleSymbol];
+            i += 1;
+        }
+
+        return sum;
     }
 }
