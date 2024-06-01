@@ -16,12 +16,15 @@
     {
         if (nums.Length == 1) return new int[0];
         if (nums.Length == 2) return new[] { 0, 1 };
-        for (int i = 0; i < nums.Length - 1; i++)
+        var map = new Dictionary<int, int>();
+        for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[i] + nums[i + 1] == target)
+            var arg1 = target - nums[i];
+            if (map.ContainsKey(arg1))
             {
-                return new[] { i, i + 1 };
+                return new int[] { map[arg1], i };
             }
+            map[nums[i]] = i;
         }
         return new int[0];
     }
