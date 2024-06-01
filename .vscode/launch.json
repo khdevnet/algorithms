@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "13RomanToInteger",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/13RomanToInteger/bin/Debug/net7.0/13RomanToInteger.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/13RomanToInteger",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "1TwoSum",
             "type": "coreclr",
             "request": "launch",
