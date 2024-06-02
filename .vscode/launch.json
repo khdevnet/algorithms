@@ -1,9 +1,20 @@
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387 
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "20ValidParentheses",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/20ValidParentheses/bin/Debug/net7.0/20ValidParentheses.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/20ValidParentheses",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
         {
             "name": "14LongestCommonPrefix",
             "type": "coreclr",
