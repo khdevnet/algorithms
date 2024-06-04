@@ -1,9 +1,20 @@
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387 
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "66PlusOne",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/66PlusOne/bin/Debug/net7.0/66PlusOne.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/66PlusOne",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
         {
             "name": "28FindTheIndexOfTheFirstOccurrenceInAString",
             "type": "coreclr",

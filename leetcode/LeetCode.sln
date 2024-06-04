@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21MergeTwoSortedLists", "21
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28FindTheIndexOfTheFirstOccurrenceInAString", "28FindTheIndexOfTheFirstOccurrenceInAString\28FindTheIndexOfTheFirstOccurrenceInAString.csproj", "{707B86F9-251A-4422-93D1-CA9C1D3552FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "66PlusOne", "66PlusOne\66PlusOne.csproj", "{78D024C8-AFC1-4556-8D82-93F2CC7FB6F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{707B86F9-251A-4422-93D1-CA9C1D3552FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{707B86F9-251A-4422-93D1-CA9C1D3552FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{707B86F9-251A-4422-93D1-CA9C1D3552FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D024C8-AFC1-4556-8D82-93F2CC7FB6F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78D024C8-AFC1-4556-8D82-93F2CC7FB6F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78D024C8-AFC1-4556-8D82-93F2CC7FB6F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78D024C8-AFC1-4556-8D82-93F2CC7FB6F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
