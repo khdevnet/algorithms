@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "69Sqrt_x_", "69Sqrt_x_\69Sq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "70ClimbingStairs", "70ClimbingStairs\70ClimbingStairs.csproj", "{39047EA3-D4C5-4186-B53B-07E7345180FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "322CoinChange", "322CoinChange\322CoinChange.csproj", "{FE95BD61-96F1-483F-A4BB-2615F26E27BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{39047EA3-D4C5-4186-B53B-07E7345180FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39047EA3-D4C5-4186-B53B-07E7345180FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39047EA3-D4C5-4186-B53B-07E7345180FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE95BD61-96F1-483F-A4BB-2615F26E27BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE95BD61-96F1-483F-A4BB-2615F26E27BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE95BD61-96F1-483F-A4BB-2615F26E27BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE95BD61-96F1-483F-A4BB-2615F26E27BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
