@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "70ClimbingStairs",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/70ClimbingStairs/bin/Debug/net7.0/70ClimbingStairs.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/70ClimbingStairs",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "69Sqrt_x_",
             "type": "coreclr",
             "request": "launch",

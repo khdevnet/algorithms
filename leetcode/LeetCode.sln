@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "66PlusOne", "66PlusOne\66Pl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "69Sqrt_x_", "69Sqrt_x_\69Sqrt_x_.csproj", "{2BEEEF61-5F60-4431-B9B7-72855B4C75B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "70ClimbingStairs", "70ClimbingStairs\70ClimbingStairs.csproj", "{39047EA3-D4C5-4186-B53B-07E7345180FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{2BEEEF61-5F60-4431-B9B7-72855B4C75B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BEEEF61-5F60-4431-B9B7-72855B4C75B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BEEEF61-5F60-4431-B9B7-72855B4C75B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39047EA3-D4C5-4186-B53B-07E7345180FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39047EA3-D4C5-4186-B53B-07E7345180FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39047EA3-D4C5-4186-B53B-07E7345180FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39047EA3-D4C5-4186-B53B-07E7345180FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
