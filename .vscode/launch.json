@@ -1,9 +1,20 @@
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387   
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387 518CoinChangell   
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "518CoinChangell",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/518CoinChangell/bin/Debug/net7.0/518CoinChangell.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/518CoinChangell",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
         {
             "name": "322CoinChange",
             "type": "coreclr",
