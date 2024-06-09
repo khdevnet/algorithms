@@ -25,6 +25,35 @@
 #### Samples
 * [quick-sort.js](https://github.com/khdevnet/algorithms/blob/master/sort/quick-sort.js)
 ### Dynamic programming
+#### Bottom-up (Tabulation)
+Bottom-up is implemented with iteration and starts at the base cases. Let's use the Fibonacci sequence as an example again. 
+The base cases for the Fibonacci sequence are 𝐹(0)=0 and 𝐹(1)=1. With bottom-up, we would use these base cases to calculate 
+𝐹(2), and then use that result to calculate 𝐹(3), and so on all the way up to 𝐹(n).
+```
+F = array of length (n + 1)
+F[0] = 0
+F[1] = 1
+for i from 2 to n:
+    F[i] = F[i - 1] + F[i - 2]
+```
+#### Top to down (Memoization)
+```
+memo = hashmap
+Function F(integer i):
+    if i is 0 or 1: 
+        return i
+    if i doesn't exist in memo:
+        memo[i] = F(i - 1) + F(i - 2)
+    return memo[i]
+```
+#### Examples of the problems
+The first characteristic that is common in DP problems is that the problem will ask for the optimum value (maximum or minimum) of something, or the number of ways there are to do something. 
+For example:
+* What is the minimum cost of doing...
+* What is the maximum profit from...
+* How many ways are there to do...
+* What is the longest possible...
+* Is it possible to reach a certain point...
 ### Branch and bound
 
 
