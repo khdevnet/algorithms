@@ -1,9 +1,20 @@
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387 518CoinChangell   
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387    
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "198HouseRobber",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/198HouseRobber/bin/Debug/net7.0/198HouseRobber.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/198HouseRobber",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
         {
             "name": "518CoinChangell",
             "type": "coreclr",
