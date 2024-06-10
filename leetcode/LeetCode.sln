@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "518CoinChangell", "518CoinC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "198HouseRobber", "198HouseRobber\198HouseRobber.csproj", "{F8DA4121-1040-4F48-9E78-576AD795A6B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "746MinCostClimbingStairs", "746MinCostClimbingStairs\746MinCostClimbingStairs.csproj", "{C2B87D12-5799-4BB0-A596-8C950DAC3D09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{F8DA4121-1040-4F48-9E78-576AD795A6B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8DA4121-1040-4F48-9E78-576AD795A6B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8DA4121-1040-4F48-9E78-576AD795A6B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2B87D12-5799-4BB0-A596-8C950DAC3D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B87D12-5799-4BB0-A596-8C950DAC3D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B87D12-5799-4BB0-A596-8C950DAC3D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B87D12-5799-4BB0-A596-8C950DAC3D09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
