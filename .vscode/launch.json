@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "24SwapNodesInPairs",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/24SwapNodesInPairs/bin/Debug/net7.0/24SwapNodesInPairs.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/24SwapNodesInPairs",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "344ReverseString",
             "type": "coreclr",
             "request": "launch",
