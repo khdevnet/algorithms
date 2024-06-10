@@ -2,12 +2,32 @@
 
 var cost = new int[] { 10, 15, 20 };
 var r = MinCostClimbingStairs(cost);
+var r2 = MinCostClimbingStairsBU(cost);
 Console.ReadLine();
 
 // state it the current stair number
 static int MinCostClimbingStairs(int[] cost)
 {
     return MinCostClimbingStairsTD(cost, cost.Length);
+}
+
+static int MinCostClimbingStairsBU(int[] cost)
+{
+    // The array's length should be 1 longer than the length of cost
+    // This is because we can treat the "top floor" as a step to reach
+    int[] minimumCost = new int[cost.Length + 1];
+
+    // Start iteration from step 2, since the minimum cost of reaching
+    // step 0 and step 1 is 0
+    for (int i = 2; i < minimumCost.Length; i++)
+    {
+        int takeOneStep = minimumCost[i - 1] + cost[i - 1];
+        int takeTwoSteps = minimumCost[i - 2] + cost[i - 2];
+        minimumCost[i] = Math.Min(takeOneStep, takeTwoSteps);
+    }
+
+    // The final element in minimumCost refers to the top floor
+    return minimumCost[minimumCost.Length - 1];
 }
 
 static int MinCostClimbingStairsTD(int[] cost, int i)
@@ -21,12 +41,15 @@ static int MinCostClimbingStairsTD(int[] cost, int i)
     var i2 = cost[i - 2] + MinCostClimbingStairsTD(cost, i - 2);
     return Math.Min(i1, i2);
 }
-// [10,15,20, out, out]
-// i+1
-// 10 -> 20 -> 30(out) 
-// j+2
-// 15 -> 30 -> 40(out) 
-// min(cost[i-1]+cost[i], cost[i-2]+cost[i] )
+// [0,1,2, 3, 4, 5]
+// 0 -> 2 -> (4 out) cost = 2 
+// 1 -> 3 -> (5 out)  cost = 4
+//
+// minCost(4 out) = 2 + cost[4]
+// minCost(5 out) = 4 + cost[5]
+// minCost(2 out) = 0 + cost[2]
+// minCost(2 out) = mincost[0] + cost[2]
+// minCost(3 out) = mincost[1] + cost[3]
 
 // Example 1:
 // Input: cost = [10,15,20]
