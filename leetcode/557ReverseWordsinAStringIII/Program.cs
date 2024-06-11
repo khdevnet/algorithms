@@ -6,17 +6,27 @@ Console.ReadLine();
 string ReverseWords(string s)
 {
     if (string.IsNullOrEmpty(s)) return s;
-    var words = s.Split(" ", StringSplitOptions.RemoveEmptyEntries);
-    for (int i = 0; i < words.Length; i++)
+
+    int start = -1;
+    int end = 0;
+    var newStr = "";
+    for (int i = 0; i < s.Length; i++)
     {
-        words[i] = ReverseWord(words[i]);
+        if (s[i] == ' ' || i == s.Length - 1)
+        {
+            start = end;
+            end = i;
+            newStr = newStr + ReverseWord(s.Substring(start, end - start));
+            if (i != s.Length - 1) newStr = newStr + ' ';
+        }
     }
-    return string.Join(" ", words);
+    return newStr;
 }
 
 string ReverseWord(string s)
 {
-    if (string.IsNullOrEmpty(s)) return s;
+    if (string.IsNullOrEmpty(s)) return "";
+
     return ReverseWord(s.Substring(1)) + s[0];
 }
 
