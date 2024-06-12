@@ -6,14 +6,20 @@ Console.ReadLine();
 
 ListNode SwapPairs(ListNode head)
 {
+    if (head == null) return null;
     if (head.next == null) return head;
-    var tail = head.next.next; // 3
-    var b = head.next; // 2
-    head.next = head; // 1
-    head = b; //2
-
-    return SwapPairs(tail);
+    ListNode tail = new ListNode(head.val);
+    ListNode newHead = new ListNode(head.next.val, tail);
+    if (head.next?.next != null)
+    {
+        tail.next = SwapPairs(head.next.next);
+    }
+    return newHead;
 }
+
+// st1  2 3
+// st2 3 4 new ListNode(head.next.val, null)
+// st3 return null;
 
 
 class ListNode
