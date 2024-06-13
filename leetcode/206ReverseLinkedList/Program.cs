@@ -1,27 +1,50 @@
 ﻿// Input: head = [1,2,3,4,5]
 // Output: [5,4,3,2,1]
 
-var head = new ListNode(1, new ListNode(2, new ListNode(3))); // new ListNode(4, new ListNode(5))
-var s=new ListNode(0);
-var reversedHead = ReverseList(head, ref s);
+var head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+var reversedHead = ReverseListLoop(head);
 while (reversedHead.next != null)
 {
-    Console.Write(reversedHead + "->");
+    Console.Write(reversedHead.val + "->");
+    reversedHead = reversedHead.next;
 }
 
 Console.ReadLine();
 
-ListNode ReverseList(ListNode head, ref ListNode tail)
+// head  head.next   head.next.next   head.next.next.next 
+//         ! 
+//        head       head.next        head.next.next
+// 1|* -> 2|*->      3|* ->           null
+//                                    <-*|2
+ListNode ReverseList(ListNode head)
 {
-    if (head != null && head.next == null)
+    if (head == null || head.next == null)
     {
-        tail = new ListNode(head.val);
-        return tail;
+        return head;
     }
-    var secondNode = ReverseList(head.next, ref tail);
-    secondNode.next = new ListNode(head.val);
-    // swap
-    return tail; //head 2, newHead 3
+    var tail = ReverseList(head.next);
+    head.next.next = head;
+    head.next = null;
+    return tail;
+}
+
+// 1|* ->     2|*->      3|* ->    null
+// prev       curr
+//            prev       curr      curr.next
+//                             
+//                       prev      curr      
+ListNode ReverseListLoop(ListNode head)
+{
+    ListNode prev = null;
+    ListNode curr = head;
+    while (curr != null)
+    {
+        ListNode nextTemp = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = nextTemp;
+    }
+    return prev;
 }
 
 class ListNode
@@ -34,19 +57,8 @@ class ListNode
         this.next = next;
     }
 }
-
-// 1|* -> 2|* -> 3|* -> null
-// St1) 1|* -> 2|*
-// st2) 2|* -> 3|* secondNode = 3|*
-// st3) 3|* -> null
-
-// st 1) 5|* -> null return null
-// st 2) 4|* -> 5
-// if(head==null || head.next == null) return head;
-// firstNode = head
-//                head 4, head.next 5
-// swap
-// // secondNode = f(head.next) // st 1) return 5; firstNode = head; secondNode.next = firstNode;
-// secondNode.next = firstNode;
-//return secondNode
-// f(head)= 
+// head  head.next   head.next.next   head.next.next.next 
+//         ! 
+//        head       head.next        head.next.next
+// 1|* -> 2|*->      3|* ->           null
+//                                    <-*|2
