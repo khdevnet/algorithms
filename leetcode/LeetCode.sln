@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24SwapNodesInPairs", "24Swa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "557ReverseWordsinAStringIII", "557ReverseWordsinAStringIII\557ReverseWordsinAStringIII.csproj", "{8217B1FE-0C42-48B7-ABE8-9F21A9378808}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "206ReverseLinkedList", "206ReverseLinkedList\206ReverseLinkedList.csproj", "{1069611C-7D9D-44A2-B9B9-C187045A4F0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{8217B1FE-0C42-48B7-ABE8-9F21A9378808}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8217B1FE-0C42-48B7-ABE8-9F21A9378808}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8217B1FE-0C42-48B7-ABE8-9F21A9378808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1069611C-7D9D-44A2-B9B9-C187045A4F0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1069611C-7D9D-44A2-B9B9-C187045A4F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1069611C-7D9D-44A2-B9B9-C187045A4F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1069611C-7D9D-44A2-B9B9-C187045A4F0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
