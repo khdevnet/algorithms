@@ -27,10 +27,31 @@
 //
 // f(rowIndex 0, colIndex 0) = f(0, 0) = 1
 
-var output = GetRow(3);
+var output = GetRow(2);
 Console.ReadLine();
 
 IList<int> GetRow(int rowIndex)
 {
-    return new List<int>();
+    if (rowIndex == 0) return new List<int>() { 1 };
+    if (rowIndex == 1) return new List<int>() { 1, 1 };
+    List<int> arr = new List<int>();
+    var mem = new Dictionary<string, int>();
+    for (int j = 0; j <= rowIndex; j++)
+    {
+        arr.Add(F(rowIndex, j, mem));
+    }
+    return arr;
+}
+
+int F(int rowIndex, int colIndex, Dictionary<string, int> mem)
+{
+    if (colIndex == 0) return 1;
+    if (rowIndex == colIndex) return 1;
+    if (!mem.ContainsKey($"{rowIndex}_{colIndex}"))
+    {
+        var val = F(rowIndex - 1, colIndex - 1, mem) + F(rowIndex - 1, colIndex, mem);
+        mem.Add($"{rowIndex}_{colIndex}", val);
+    }
+
+    return mem[$"{rowIndex}_{colIndex}"];
 }
