@@ -28,8 +28,29 @@
 // f(rowIndex 0, colIndex 0) = f(0, 0) = 1
 
 //var t = F(4, 2);
-var arr = Generate(5);
+var arr = GenerateDP(5);
+var arr2 = Generate(5);
 Console.ReadLine();
+
+//
+//
+IList<IList<int>> GenerateDP(int numRows)
+{
+    IList<IList<int>> triangle = new List<IList<int>>();
+    triangle.Add(new List<int>());
+    triangle[0].Add(1);
+    for (int i = 1; i < numRows; i++)
+    {
+        triangle.Add(new List<int>());
+        triangle[i].Add(1);
+        for (int j = 1; j < i; j++)
+        {
+            ((List<int>)triangle[i]).Add(triangle[i - 1][j - 1] + triangle[i - 1][j]);
+        }
+        triangle[i].Add(1);
+    }
+    return triangle;
+}
 
 IList<IList<int>> Generate(int numRows)
 {
