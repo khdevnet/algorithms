@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "509FibonacciNumber",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/509FibonacciNumber/bin/Debug/net7.0/509FibonacciNumber.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/509FibonacciNumber",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "118PascalsTriangle",
             "type": "coreclr",
             "request": "launch",
