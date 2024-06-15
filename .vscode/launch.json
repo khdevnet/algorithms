@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "119PascalsTriangleII",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/119PascalsTriangleII/bin/Debug/net7.0/119PascalsTriangleII.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/119PascalsTriangleII",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "700SearchInABinarySearchTree",
             "type": "coreclr",
             "request": "launch",
