@@ -1,9 +1,20 @@
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387 
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "50Pow_X_n",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/50Pow_X_n/bin/Debug/net7.0/50Pow_X_n.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/50Pow_X_n",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
         {
             "name": "104MaximumDepthOfBinaryTree",
             "type": "coreclr",
