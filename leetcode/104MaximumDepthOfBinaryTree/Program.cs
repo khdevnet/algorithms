@@ -18,6 +18,17 @@ var d = MaxDepth(root);
 
 Console.ReadLine();
 
+int MaxDepthLC(TreeNode root)
+{
+    if (root == null)
+    {
+        return 0;
+    }
+
+    var rL = MaxDepth(root.right);
+    var lL = MaxDepth(root.left);
+    return 1 + Math.Max(rL, lL);
+}
 
 int MaxDepth(TreeNode root)
 {
