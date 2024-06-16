@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "118PascalsTriangle", "118Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "509FibonacciNumber", "509FibonacciNumber\509FibonacciNumber.csproj", "{609D61AE-2B1B-46D8-BCC0-E85334E03083}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "104MaximumDepthOfBinaryTree", "104MaximumDepthOfBinaryTree\104MaximumDepthOfBinaryTree.csproj", "{04496874-B8A2-4C83-8904-1F7DCEAC573D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -177,6 +179,10 @@ Global
 		{609D61AE-2B1B-46D8-BCC0-E85334E03083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{609D61AE-2B1B-46D8-BCC0-E85334E03083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{609D61AE-2B1B-46D8-BCC0-E85334E03083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04496874-B8A2-4C83-8904-1F7DCEAC573D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04496874-B8A2-4C83-8904-1F7DCEAC573D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04496874-B8A2-4C83-8904-1F7DCEAC573D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04496874-B8A2-4C83-8904-1F7DCEAC573D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
