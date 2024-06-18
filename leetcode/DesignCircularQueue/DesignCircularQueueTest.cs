@@ -3,95 +3,145 @@ namespace DesignCircularQueue;
 public class DesignCircularQueueTest
 {
     [Fact]
-    public void Test1()
+    public void MyCircularQueueTest()
     {
-        MyCircularQueue myCircularQueue = new MyCircularQueue(3);
+        var myCircularQueue = new MyCircularQueue(3);
         Assert.True(myCircularQueue.EnQueue(1)); // return True
         Assert.True(myCircularQueue.EnQueue(2)); // return True
         Assert.True(myCircularQueue.EnQueue(3)); // return True
-        Assert.True(myCircularQueue.EnQueue(4)); // return False
+        Assert.False(myCircularQueue.EnQueue(4)); // return False
         Assert.Equal(3, myCircularQueue.Rear());     // return 3
         Assert.True(myCircularQueue.IsFull());   // return True
         Assert.True(myCircularQueue.DeQueue());  // return True
         Assert.True(myCircularQueue.EnQueue(4)); // return True
-        Assert.Equal(3, myCircularQueue.Rear());     // return 4
+        Assert.Equal(4, myCircularQueue.Rear());     // return 4
     }
 
-    public class MyCircularQueue
+    [Fact]
+    public void MyQueueTest()
     {
-        private readonly int[] _queue;
-        private int _head = 0;
-        private int _tail;
-        private int _endIndex;
-        private int _startIndex;
-        public MyCircularQueue(int k)
+        var myQueue = new MyQueue();
+        Assert.True(myQueue.EnQueue(1)); // return True
+        Assert.True(myQueue.EnQueue(2)); // return True
+        Assert.True(myQueue.EnQueue(3)); // return True
+        Assert.False(myQueue.EnQueue(4)); // return False
+        Assert.Equal(3, myQueue.Rear());     // return 3
+        Assert.True(myQueue.DeQueue());  // return True
+        Assert.True(myQueue.EnQueue(4)); // return True
+        Assert.Equal(4, myQueue.Rear());     // return 4
+    }
+
+    public class MyQueue
+    {
+        private readonly List<int> queue;
+        private int headIndex;
+        private int count;
+        public MyQueue()
         {
-            _queue = new int[k];
-            _endIndex = k - 1;
-            _tail = 0;
-            _startIndex = 0;
+            queue = new List<int>();
+            headIndex = 0;
+            count = 0;
         }
 
         public bool EnQueue(int value)
         {
-            _queue[_tail] = value;
-            if (IsFull())
-            {
-                return false;
-            }
-
-            if (_tail == _endIndex)
-            {
-                if (_startIndex < _head && _head > 0)
-                {
-                    _tail = _startIndex;
-                }
-            }
-
-            _tail++;
-
+            var tail = headIndex + count;
+            queue[tail] = value;
+            count += 1;
             return true;
         }
 
         public bool DeQueue()
         {
-            if (IsEmpty())
-            {
-                return false;
-            }
-            if (_head == _endIndex)
-            {
-
-                _head = _startIndex;
-            }
-            _head++;
+            if (count == 0) return false;
+            headIndex += 1;
+            count -= 1;
             return true;
         }
 
         public int Front()
         {
-            if (IsEmpty())
+            if (count == 0)
             {
                 return -1;
             }
 
-            return _queue[_head];
+            return queue[headIndex];
         }
 
         public int Rear()
         {
-            return IsEmpty() ? -1 : _queue[_tail];
+            if (count == 0)
+            {
+                return -1;
+            }
+            return queue[headIndex + count - 1];
         }
 
         public bool IsEmpty()
         {
-            return _head == _tail;
+            return count == 0;
+        }
+    }
+
+    public class MyCircularQueue
+    {
+        private readonly int[] queue;
+        private int headIndex;
+        private int capacity;
+        private int count;
+        public MyCircularQueue(int k)
+        {
+            queue = new int[k];
+            capacity = k;
+            headIndex = 0;
+            count = 0;
+        }
+
+        public bool EnQueue(int value)
+        {
+            if (count == capacity) return false;
+            var tail = (headIndex + count) % capacity;
+            queue[tail] = value;
+            count += 1;
+            return true;
+        }
+
+        public bool DeQueue()
+        {
+            if (count == 0) return false;
+            headIndex = (headIndex + 1) % capacity;
+            count -= 1;
+            return true;
+        }
+
+        public int Front()
+        {
+            if (count == 0)
+            {
+                return -1;
+            }
+
+            return queue[headIndex];
+        }
+
+        public int Rear()
+        {
+            if (count == 0)
+            {
+                return -1;
+            }
+            return queue[(headIndex + count - 1) % capacity];
+        }
+
+        public bool IsEmpty()
+        {
+            return count == 0;
         }
 
         public bool IsFull()
         {
-            if (IsEmpty()) return false;
-            return (_head == _startIndex && _tail == _endIndex) || !(_head < _tail);
+            return count == capacity;
         }
     }
 }
