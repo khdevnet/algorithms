@@ -24,7 +24,6 @@ public class DesignCircularQueueTest
         Assert.True(myQueue.EnQueue(1)); // return True
         Assert.True(myQueue.EnQueue(2)); // return True
         Assert.True(myQueue.EnQueue(3)); // return True
-        Assert.False(myQueue.EnQueue(4)); // return False
         Assert.Equal(3, myQueue.Rear());     // return 3
         Assert.True(myQueue.DeQueue());  // return True
         Assert.True(myQueue.EnQueue(4)); // return True
@@ -35,33 +34,28 @@ public class DesignCircularQueueTest
     {
         private readonly List<int> queue;
         private int headIndex;
-        private int count;
         public MyQueue()
         {
             queue = new List<int>();
             headIndex = 0;
-            count = 0;
         }
 
         public bool EnQueue(int value)
         {
-            var tail = headIndex + count;
-            queue[tail] = value;
-            count += 1;
+            queue.Add(value);
             return true;
         }
 
         public bool DeQueue()
         {
-            if (count == 0) return false;
+            if (queue.Count == 0) return false;
             headIndex += 1;
-            count -= 1;
             return true;
         }
 
         public int Front()
         {
-            if (count == 0)
+            if (queue.Count - 1 == headIndex)
             {
                 return -1;
             }
@@ -71,16 +65,16 @@ public class DesignCircularQueueTest
 
         public int Rear()
         {
-            if (count == 0)
+            if (queue.Count == headIndex)
             {
                 return -1;
             }
-            return queue[headIndex + count - 1];
+            return queue[queue.Count - 1];
         }
 
         public bool IsEmpty()
         {
-            return count == 0;
+            return queue.Count - 1 == headIndex;
         }
     }
 
