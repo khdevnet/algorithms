@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "50Pow_X_n", "50Pow_X_n\50Po
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignCircularQueue", "DesignCircularQueue\DesignCircularQueue.csproj", "{F4668B7E-A121-4017-A2FB-977114DA1C2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "346MovingAverageFromDataStream", "346MovingAverageFromDataStream\346MovingAverageFromDataStream.csproj", "{1774FC9D-F666-47A7-BE43-46BEAECDE048}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -195,6 +197,10 @@ Global
 		{F4668B7E-A121-4017-A2FB-977114DA1C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4668B7E-A121-4017-A2FB-977114DA1C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4668B7E-A121-4017-A2FB-977114DA1C2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1774FC9D-F666-47A7-BE43-46BEAECDE048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1774FC9D-F666-47A7-BE43-46BEAECDE048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1774FC9D-F666-47A7-BE43-46BEAECDE048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1774FC9D-F666-47A7-BE43-46BEAECDE048}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

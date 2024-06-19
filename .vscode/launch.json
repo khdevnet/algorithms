@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "346MovingAverageFromDataStream",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/leetcode/346MovingAverageFromDataStream/bin/Debug/net7.0/346MovingAverageFromDataStream.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/leetcode/346MovingAverageFromDataStream",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "50Pow_X_n",
             "type": "coreclr",
             "request": "launch",
