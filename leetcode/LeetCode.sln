@@ -73,6 +73,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "136SingleNumber", "136Singl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "217ContainsDuplicate", "217ContainsDuplicate\217ContainsDuplicate.csproj", "{2E1D6FFA-CA84-43B8-853F-E0BAFAABA014}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "387FirstUniqueCharacterInAString", "387FirstUniqueCharacterInAString\387FirstUniqueCharacterInAString.csproj", "{8C4060BD-B211-447E-8908-D302A8F27188}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -219,6 +221,10 @@ Global
 		{2E1D6FFA-CA84-43B8-853F-E0BAFAABA014}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E1D6FFA-CA84-43B8-853F-E0BAFAABA014}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E1D6FFA-CA84-43B8-853F-E0BAFAABA014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C4060BD-B211-447E-8908-D302A8F27188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4060BD-B211-447E-8908-D302A8F27188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4060BD-B211-447E-8908-D302A8F27188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4060BD-B211-447E-8908-D302A8F27188}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
