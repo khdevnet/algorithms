@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "346MovingAverageFromDataStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "125ValidPalindrome", "125ValidPalindrome\125ValidPalindrome.csproj", "{39B8A72F-EEC4-4191-9B33-2C31AEA67B9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "136SingleNumber", "136SingleNumber\136SingleNumber.csproj", "{E2EF5144-9180-4041-900C-8562528EEAD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -207,6 +209,10 @@ Global
 		{39B8A72F-EEC4-4191-9B33-2C31AEA67B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39B8A72F-EEC4-4191-9B33-2C31AEA67B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39B8A72F-EEC4-4191-9B33-2C31AEA67B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2EF5144-9180-4041-900C-8562528EEAD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2EF5144-9180-4041-900C-8562528EEAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2EF5144-9180-4041-900C-8562528EEAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2EF5144-9180-4041-900C-8562528EEAD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
