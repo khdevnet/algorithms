@@ -7,3 +7,6 @@
 ## Dynamic programming
 * [Easy] 70. Climbing Stairs
 * [Easy] 509. Fibonacci Number
+
+## Other
+* [Easy] 1160. Find Words That Can Be Formed by Characters
